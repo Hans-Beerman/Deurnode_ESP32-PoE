@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Deurnode (based on Olimex ESP32-POE)"
-Date "2020-02-27"
-Rev "Version 0.1"
+Date "2020-02-28"
+Rev "Version 0.2"
 Comp "Makerspace Leiden"
 Comment1 "Hans Beerman"
 Comment2 ""
