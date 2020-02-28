@@ -417,7 +417,7 @@ Wire Wire Line
 	5100 1750 5100 1800
 Wire Wire Line
 	2300 3150 3100 3150
-Text GLabel 4350 3900 0    50   Input ~ 0
+Text GLabel 4350 3500 0    50   Input ~ 0
 GPI36_U1RXD
 Wire Wire Line
 	2300 2450 2900 2450
@@ -491,11 +491,11 @@ F 3 "" H 5300 1100 50  0001 C CNN
 $EndComp
 Text Notes 2400 3550 0    59   ~ 12
 Rfid
-Text Notes 5550 1550 0    59   ~ 12
+Text Notes 5400 1650 0    59   ~ 12
 Buzzer output
-Text Notes 5450 3950 0    59   ~ 12
+Text Notes 5350 4000 0    59   ~ 12
 Grote schakelaar
-Text Notes 5450 5000 0    59   ~ 12
+Text Notes 5350 6550 0    59   ~ 12
 Stappen motor
 $Comp
 L power:GND #PWR0101
@@ -749,7 +749,7 @@ $EndComp
 Wire Wire Line
 	6800 4100 6800 4600
 Wire Wire Line
-	4750 3650 6800 3650
+	4700 3250 6750 3250
 Wire Wire Line
 	6800 3650 6800 3900
 Wire Wire Line
@@ -864,82 +864,37 @@ Text GLabel 6600 5100 0    50   BiDi ~ 0
 GPI39
 Wire Wire Line
 	6600 5100 6800 5100
-Text Notes 8450 3650 0    59   ~ 12
+Text Notes 8500 3750 0    59   ~ 12
 Opto Coupler input 1
 Text Notes 8450 800  0    59   ~ 12
 Relais output
-Text Notes 8450 5100 0    59   ~ 12
+Text Notes 8500 5200 0    59   ~ 12
 Opto Coupler input 2
-$Comp
-L IRFZ44N:IRFZ44N U1
-U 1 1 5E6877D0
-P 7750 2600
-F 0 "U1" H 7912 2646 50  0000 L CNN
-F 1 "IRFZ44N" H 7912 2555 50  0000 L CNN
-F 2 "IRFZ44N:TO-220" H 7750 2600 50  0001 L BNN
-F 3 "" H 7750 2600 50  0001 C CNN
-	1    7750 2600
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR012
 U 1 1 5E6970C4
-P 7750 3050
-F 0 "#PWR012" H 7750 2800 50  0001 C CNN
-F 1 "GND" H 7755 2877 50  0000 C CNN
-F 2 "" H 7750 3050 50  0001 C CNN
-F 3 "" H 7750 3050 50  0001 C CNN
-	1    7750 3050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Screw_Terminal_01x02 J13
-U 1 1 5E698A7D
-P 8600 2500
-F 0 "J13" H 8680 2492 50  0000 L CNN
-F 1 "Screw_Terminal_01x02" H 8680 2401 50  0000 L CNN
-F 2 "TerminalBlock_RND:TerminalBlock_RND_205-00287_1x02_P5.08mm_Horizontal" H 8600 2500 50  0001 C CNN
-F 3 "~" H 8600 2500 50  0001 C CNN
-	1    8600 2500
+P 7750 3200
+F 0 "#PWR012" H 7750 2950 50  0001 C CNN
+F 1 "GND" H 7755 3027 50  0000 C CNN
+F 2 "" H 7750 3200 50  0001 C CNN
+F 3 "" H 7750 3200 50  0001 C CNN
+	1    7750 3200
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR019
 U 1 1 5E699091
-P 8400 3050
-F 0 "#PWR019" H 8400 2800 50  0001 C CNN
-F 1 "GND" H 8405 2877 50  0000 C CNN
-F 2 "" H 8400 3050 50  0001 C CNN
-F 3 "" H 8400 3050 50  0001 C CNN
-	1    8400 3050
+P 8400 3200
+F 0 "#PWR019" H 8400 2950 50  0001 C CNN
+F 1 "GND" H 8405 3027 50  0000 C CNN
+F 2 "" H 8400 3200 50  0001 C CNN
+F 3 "" H 8400 3200 50  0001 C CNN
+	1    8400 3200
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	7750 2400 8400 2400
-Wire Wire Line
-	8400 2400 8400 2500
 Wire Wire Line
 	5500 2150 5500 2350
-Wire Wire Line
-	6750 2600 7450 2600
-$Comp
-L Connector_Generic:Conn_01x03 J9
-U 1 1 5E6D2840
-P 4950 3900
-F 0 "J9" H 5050 4000 50  0000 L CNN
-F 1 "Jumper Input" H 5050 3800 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 4950 3900 50  0001 C CNN
-F 3 "~" H 4950 3900 50  0001 C CNN
-	1    4950 3900
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4350 3900 4750 3900
-Wire Wire Line
-	4750 4000 4750 4150
 Connection ~ 4750 4150
-Wire Wire Line
-	4750 3800 4750 3650
 $Comp
 L Connector_Generic:Conn_01x03 J10
 U 1 1 5E6E9D74
@@ -980,8 +935,6 @@ F 3 "~" H 6950 2350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6750 2450 6750 2600
-Wire Wire Line
 	6750 2250 6750 1600
 Connection ~ 6750 1600
 Wire Wire Line
@@ -989,36 +942,31 @@ Wire Wire Line
 $Comp
 L Device:R R5
 U 1 1 5E70B397
-P 6750 2850
-F 0 "R5" H 6820 2896 50  0000 L CNN
-F 1 "47k" V 6750 2800 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 6680 2850 50  0001 C CNN
-F 3 "~" H 6750 2850 50  0001 C CNN
-	1    6750 2850
+P 6750 3000
+F 0 "R5" H 6820 3046 50  0000 L CNN
+F 1 "47k" V 6750 2950 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 6680 3000 50  0001 C CNN
+F 3 "~" H 6750 3000 50  0001 C CNN
+	1    6750 3000
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR07
 U 1 1 5E70BEAF
-P 6750 3050
-F 0 "#PWR07" H 6750 2800 50  0001 C CNN
-F 1 "GND" H 6755 2877 50  0000 C CNN
-F 2 "" H 6750 3050 50  0001 C CNN
-F 3 "" H 6750 3050 50  0001 C CNN
-	1    6750 3050
+P 6750 3200
+F 0 "#PWR07" H 6750 2950 50  0001 C CNN
+F 1 "GND" H 6755 3027 50  0000 C CNN
+F 2 "" H 6750 3200 50  0001 C CNN
+F 3 "" H 6750 3200 50  0001 C CNN
+	1    6750 3200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8400 2600 8400 3050
+	7750 3000 7750 3200
 Wire Wire Line
-	7750 2800 7750 3050
-Wire Wire Line
-	6750 3000 6750 3050
+	6750 3150 6750 3200
 Wire Wire Line
 	5100 2900 5100 3050
-Wire Wire Line
-	6750 2700 6750 2600
-Connection ~ 6750 2600
 $Comp
 L Device:R R4
 U 1 1 5E72E414
@@ -1086,4 +1034,138 @@ Wire Wire Line
 	7800 5900 7850 5900
 Wire Wire Line
 	7800 5900 7800 6050
+$Comp
+L Diode:1N4004 D2
+U 1 1 5E59A592
+P 8100 2250
+F 0 "D2" H 8050 2050 50  0000 L CNN
+F 1 "1N4004" H 7950 2150 50  0000 L CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 8100 2075 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 8100 2250 50  0001 C CNN
+	1    8100 2250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7750 2250 7950 2250
+Wire Wire Line
+	8250 2250 8400 2250
+$Comp
+L power:+12V #PWR018
+U 1 1 5E5B5435
+P 8400 2100
+F 0 "#PWR018" H 8400 1950 50  0001 C CNN
+F 1 "+12V" H 8400 2300 50  0000 C CNN
+F 2 "" H 8400 2100 50  0001 C CNN
+F 3 "" H 8400 2100 50  0001 C CNN
+	1    8400 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8400 2100 8400 2250
+$Comp
+L Device:LED D3
+U 1 1 5E5BC9B9
+P 8100 3000
+F 0 "D3" V 8139 2883 50  0000 R CNN
+F 1 "LED" V 8048 2883 50  0000 R CNN
+F 2 "LED_THT:LED_D3.0mm" H 8100 3000 50  0001 C CNN
+F 3 "~" H 8100 3000 50  0001 C CNN
+	1    8100 3000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R10
+U 1 1 5E5D8FE6
+P 8100 2650
+F 0 "R10" H 8170 2696 50  0000 L CNN
+F 1 "2k2" V 8100 2600 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 8030 2650 50  0001 C CNN
+F 3 "~" H 8100 2650 50  0001 C CNN
+	1    8100 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8100 2800 8100 2850
+$Comp
+L power:GND #PWR017
+U 1 1 5E5E5EB6
+P 8100 3200
+F 0 "#PWR017" H 8100 2950 50  0001 C CNN
+F 1 "GND" H 8105 3027 50  0000 C CNN
+F 2 "" H 8100 3200 50  0001 C CNN
+F 3 "" H 8100 3200 50  0001 C CNN
+	1    8100 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8100 3200 8100 3150
+$Comp
+L IRFZ44N:IRFZ44N U1
+U 1 1 5E6877D0
+P 7750 2800
+F 0 "U1" H 7400 2850 50  0000 L CNN
+F 1 "IRFZ44N" H 7200 2750 50  0000 L CNN
+F 2 "IRFZ44N:TO-220" H 7750 2800 50  0001 L BNN
+F 3 "" H 7750 2800 50  0001 C CNN
+	1    7750 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7750 2350 8100 2350
+Wire Wire Line
+	7750 2250 7750 2350
+Connection ~ 7750 2350
+Wire Wire Line
+	7750 2350 7750 2600
+Wire Wire Line
+	8100 2500 8100 2350
+Connection ~ 8100 2350
+Wire Wire Line
+	8100 2350 8400 2350
+Connection ~ 8400 2250
+$Comp
+L Connector:Screw_Terminal_01x03 J13
+U 1 1 5E59C59F
+P 8600 2350
+F 0 "J13" H 8680 2392 50  0000 L CNN
+F 1 "Screw_Terminal_01x03" H 8680 2301 50  0000 L CNN
+F 2 "TerminalBlock_RND:TerminalBlock_RND_205-00288_1x03_P5.08mm_Horizontal" H 8600 2350 50  0001 C CNN
+F 3 "~" H 8600 2350 50  0001 C CNN
+	1    8600 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8400 2450 8400 3200
+Wire Wire Line
+	6750 2450 6750 2800
+Wire Wire Line
+	7450 2800 6750 2800
+Connection ~ 6750 2800
+Wire Wire Line
+	6750 2800 6750 2850
+$Comp
+L Connector_Generic:Conn_01x03 J9
+U 1 1 5E6D2840
+P 6500 3850
+F 0 "J9" V 6600 3950 50  0000 L CNN
+F 1 "Jumper Input" V 6700 3650 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 6500 3850 50  0001 C CNN
+F 3 "~" H 6500 3850 50  0001 C CNN
+	1    6500 3850
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	6600 3650 6800 3650
+Wire Wire Line
+	6400 3650 4750 3650
+Wire Wire Line
+	4750 3650 4750 4150
+Wire Wire Line
+	4350 3500 6500 3500
+Wire Wire Line
+	6500 3500 6500 3650
+Text Notes 5600 5000 0    59   ~ 12
+12V
+Text Notes 8550 2050 0    59   ~ 12
+FET output
 $EndSCHEMATC
