@@ -27,7 +27,7 @@ Both opto couplers can be used to detect 230V AC available or not. By changing t
     - A relais controlled output (max. 250V AC/10A)
     - A FET based output based on Polu Breakout A4988.
 
-The FET can handle DC \&lt; 55/V35 A. In that case the FET most likely must be kept cool by means of a small cool block.
+The FET can handle max DC 55V/35 A. In that case the FET most likely must be kept cool by means of a small cool block.
 
 - SPI based RFID reader connection
 - Step motor output
