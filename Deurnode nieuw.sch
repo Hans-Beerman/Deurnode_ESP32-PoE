@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Deurnode (based on Olimex ESP32-POE)"
-Date "2020-02-28"
-Rev "Version 0.2"
+Date "2020-03-02"
+Rev "Version 0.3"
 Comp "Makerspace Leiden"
 Comment1 "Hans Beerman"
 Comment2 ""
@@ -1168,4 +1168,112 @@ Text Notes 5600 5000 0    59   ~ 12
 12V
 Text Notes 8550 2050 0    59   ~ 12
 FET output
+$Comp
+L Converter_DCDC:OKI-78SR-5_1.5-W36-C U2
+U 1 1 5E5D0A07
+P 2500 4400
+F 0 "U2" H 2500 4642 50  0000 C CNN
+F 1 "OKI-78SR-5_1.5-W36-C" H 2500 4551 50  0000 C CNN
+F 2 "Converter_DCDC:Converter_DCDC_muRata_OKI-78SR_Vertical" H 2550 4150 50  0001 L CIN
+F 3 "https://power.murata.com/data/power/oki-78sr.pdf" H 2500 4400 50  0001 C CNN
+	1    2500 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR021
+U 1 1 5E5D1D45
+P 2500 4800
+F 0 "#PWR021" H 2500 4550 50  0001 C CNN
+F 1 "GND" H 2505 4627 50  0000 C CNN
+F 2 "" H 2500 4800 50  0001 C CNN
+F 3 "" H 2500 4800 50  0001 C CNN
+	1    2500 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR020
+U 1 1 5E5D209E
+P 1800 4300
+F 0 "#PWR020" H 1800 4150 50  0001 C CNN
+F 1 "+12V" H 1815 4473 50  0000 C CNN
+F 2 "" H 1800 4300 50  0001 C CNN
+F 3 "" H 1800 4300 50  0001 C CNN
+	1    1800 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 4300 1800 4400
+Wire Wire Line
+	1800 4400 2200 4400
+Wire Wire Line
+	2500 4700 2500 4800
+Wire Wire Line
+	2800 4400 3200 4400
+$Comp
+L power:PWR_FLAG #FLG01
+U 1 1 5E62BB13
+P 1450 4300
+F 0 "#FLG01" H 1450 4375 50  0001 C CNN
+F 1 "PWR_FLAG" H 1450 4473 50  0000 C CNN
+F 2 "" H 1450 4300 50  0001 C CNN
+F 3 "~" H 1450 4300 50  0001 C CNN
+	1    1450 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1450 4300 1450 4400
+Wire Wire Line
+	1450 4400 1800 4400
+Connection ~ 1800 4400
+$Comp
+L power:PWR_FLAG #FLG03
+U 1 1 5E63CD5D
+P 3600 4300
+F 0 "#FLG03" H 3600 4375 50  0001 C CNN
+F 1 "PWR_FLAG" H 3600 4473 50  0000 C CNN
+F 2 "" H 3600 4300 50  0001 C CNN
+F 3 "~" H 3600 4300 50  0001 C CNN
+	1    3600 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR023
+U 1 1 5E63E8A4
+P 3200 4300
+F 0 "#PWR023" H 3200 4150 50  0001 C CNN
+F 1 "+5V" H 3215 4473 50  0000 C CNN
+F 2 "" H 3200 4300 50  0001 C CNN
+F 3 "" H 3200 4300 50  0001 C CNN
+	1    3200 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3200 4300 3200 4400
+Wire Wire Line
+	3200 4400 3600 4400
+Wire Wire Line
+	3600 4400 3600 4300
+Connection ~ 3200 4400
+$Comp
+L power:PWR_FLAG #FLG02
+U 1 1 5E64E3BA
+P 2000 4800
+F 0 "#FLG02" H 2000 4875 50  0001 C CNN
+F 1 "PWR_FLAG" H 2000 4973 50  0000 C CNN
+F 2 "" H 2000 4800 50  0001 C CNN
+F 3 "~" H 2000 4800 50  0001 C CNN
+	1    2000 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR022
+U 1 1 5E64F961
+P 2000 4800
+F 0 "#PWR022" H 2000 4550 50  0001 C CNN
+F 1 "GND" H 2005 4627 50  0000 C CNN
+F 2 "" H 2000 4800 50  0001 C CNN
+F 3 "" H 2000 4800 50  0001 C CNN
+	1    2000 4800
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
