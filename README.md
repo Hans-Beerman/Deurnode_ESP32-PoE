@@ -6,7 +6,7 @@ This repository contains the KiCad design for Deurnode nieuw, a deurnode for the
 
 **This Deurnode Nieuw has the following features:**
 
-- Two digital inputs are available. By means of a jumper the following options are available:
+- Two digital inputs van be used. By means of a jumper the following options are available:
 
 Option 1:
 
@@ -19,7 +19,7 @@ Option 2:
 -
   - 2x opto coupler input
 
-Both opto couplers can be used to detect 230V AC available or not. By changing the input resistors of the optocouplers the inputs can be used for other voltages as well
+Both opto couplers can detect 230V AC available or not. By changing the input resistors of the optocouplers the inputs can be used for other voltages as well
 
 - 1 digital output is available. By means of two jumpers the following options are available:
   - Digital output, to directly control a buzzer
@@ -47,4 +47,4 @@ For this solution a PoE splitter is used. On the Deurnode board jumper J19 must 
 
 To prevent hazardous shocks, plexiglass plates can be mounted on the board. The board contains 6 holes to mount these plates.
 
-For more information over these protection plates, see the &quot;DeurnodeProtection-230V.pdf&quot; or the Autocad &quot;DeurnodeProtection-230V.dwg&quot; files.
+For more information about these protection plates, see the &quot;DeurnodeProtection-230V.pdf&quot; or the Autocad &quot;DeurnodeProtection-230V.dwg&quot; files.
