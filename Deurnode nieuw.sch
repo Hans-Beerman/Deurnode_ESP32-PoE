@@ -1207,8 +1207,6 @@ Wire Wire Line
 	1800 4400 2200 4400
 Wire Wire Line
 	2500 4700 2500 4800
-Wire Wire Line
-	2800 4400 3200 4400
 $Comp
 L power:PWR_FLAG #FLG01
 U 1 1 5E62BB13
@@ -1253,7 +1251,6 @@ Wire Wire Line
 	3200 4400 3600 4400
 Wire Wire Line
 	3600 4400 3600 4300
-Connection ~ 3200 4400
 $Comp
 L power:PWR_FLAG #FLG02
 U 1 1 5E64E3BA
@@ -1276,4 +1273,61 @@ F 3 "" H 2000 4800 50  0001 C CNN
 	1    2000 4800
 	1    0    0    -1  
 $EndComp
+$Comp
+L Connector:Barrel_Jack J18
+U 1 1 5E5DAF0A
+P 2500 5500
+F 0 "J18" H 2557 5825 50  0000 C CNN
+F 1 "Barrel_Jack" H 2557 5734 50  0000 C CNN
+F 2 "Connector_BarrelJack:BarrelJack_CUI_PJ-063AH_Horizontal_CircularHoles" H 2550 5460 50  0001 C CNN
+F 3 "~" H 2550 5460 50  0001 C CNN
+	1    2500 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR024
+U 1 1 5E5E3E19
+P 2850 5350
+F 0 "#PWR024" H 2850 5200 50  0001 C CNN
+F 1 "+12V" H 2865 5523 50  0000 C CNN
+F 2 "" H 2850 5350 50  0001 C CNN
+F 3 "" H 2850 5350 50  0001 C CNN
+	1    2850 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR025
+U 1 1 5E5E43FB
+P 2850 5650
+F 0 "#PWR025" H 2850 5400 50  0001 C CNN
+F 1 "GND" H 2855 5477 50  0000 C CNN
+F 2 "" H 2850 5650 50  0001 C CNN
+F 3 "" H 2850 5650 50  0001 C CNN
+	1    2850 5650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 5400 2850 5400
+Wire Wire Line
+	2850 5400 2850 5350
+Wire Wire Line
+	2800 5600 2850 5600
+Wire Wire Line
+	2850 5600 2850 5650
+$Comp
+L Connector_Generic:Conn_01x02 J19
+U 1 1 5E5DCC3F
+P 2950 4600
+F 0 "J19" H 2900 4400 50  0000 L CNN
+F 1 "Conn_01x02" V 3050 4350 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 2950 4600 50  0001 C CNN
+F 3 "~" H 2950 4600 50  0001 C CNN
+	1    2950 4600
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	2800 4400 2950 4400
+Wire Wire Line
+	3050 4400 3200 4400
+Connection ~ 3200 4400
 $EndSCHEMATC
