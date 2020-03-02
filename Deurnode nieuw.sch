@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 1 1
 Title "Deurnode (based on Olimex ESP32-POE)"
 Date "2020-03-02"
-Rev "Version 0.3"
+Rev "Version 0.4"
 Comp "Makerspace Leiden"
 Comment1 "Hans Beerman"
 Comment2 ""
