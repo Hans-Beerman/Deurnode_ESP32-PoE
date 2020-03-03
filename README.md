@@ -1,6 +1,6 @@
 **KiCaD (concept) design Deurnode nieuw**
 
-Current version: V0.4
+Current version: V0.5
 
 This repository contains the KiCad design for Deurnode nieuw, a deurnode for the Makerspace Leiden. This new design is based on the use of an Olimex ESP32-PoE.
 
@@ -27,7 +27,7 @@ Both opto couplers can detect 230V AC available or not. By changing the input re
     - A relais controlled output (max. 250V AC/10A)
     - A FET based output based on Polu Breakout A4988.
 
-The FET can handle max DC 55V/35 A. In that case the FET most likely must be kept cool by means of a small cool block.
+The FET can handle max DC 55V/35 A. In that case the FET most likely must be kept cool by means of a small cool block. By means of two jumpers FET can be used completely isolated from circuitboard or not. If not, the 12V available on the board is used for the FET.
 
 - SPI based RFID reader connection
 - Step motor output
