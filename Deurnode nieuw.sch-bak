@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Deurnode (based on Olimex ESP32-POE)"
-Date "2020-03-03"
-Rev "Version 0.5"
+Date "2020-03-05"
+Rev "Version 0.6"
 Comp "Makerspace Leiden"
 Comment1 "Hans Beerman"
 Comment2 ""
@@ -372,18 +372,16 @@ $EndComp
 $Comp
 L Device:R R1
 U 1 1 5E202795
-P 4650 2700
-F 0 "R1" V 4550 2700 50  0000 C CNN
-F 1 "1k" V 4650 2700 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 4580 2700 50  0001 C CNN
-F 3 "~" H 4650 2700 50  0001 C CNN
-	1    4650 2700
+P 4600 2700
+F 0 "R1" V 4500 2700 50  0000 C CNN
+F 1 "1k" V 4600 2700 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 4530 2700 50  0001 C CNN
+F 3 "~" H 4600 2700 50  0001 C CNN
+	1    4600 2700
 	0    1    1    0   
 $EndComp
 Text GLabel 4350 2700 0    50   Input ~ 0
 GPIO16_I2C-SCL
-Wire Wire Line
-	4350 2700 4500 2700
 $Comp
 L Device:R R2
 U 1 1 5E2027A4
@@ -1155,17 +1153,6 @@ F 3 "" H 2000 4800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Barrel_Jack J18
-U 1 1 5E5DAF0A
-P 2500 5500
-F 0 "J18" H 2557 5825 50  0000 C CNN
-F 1 "Barrel_Jack" H 2557 5734 50  0000 C CNN
-F 2 "Connector_BarrelJack:BarrelJack_CUI_PJ-063AH_Horizontal_CircularHoles" H 2550 5460 50  0001 C CNN
-F 3 "~" H 2550 5460 50  0001 C CNN
-	1    2500 5500
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+12V #PWR024
 U 1 1 5E5E3E19
 P 2850 5350
@@ -1199,8 +1186,8 @@ $Comp
 L Connector_Generic:Conn_01x02 J19
 U 1 1 5E5DCC3F
 P 2950 4600
-F 0 "J19" H 2900 4400 50  0000 L CNN
-F 1 "Conn_01x02" V 3050 4350 50  0000 L CNN
+F 0 "J19" V 2950 4300 50  0000 L CNN
+F 1 "Jumper Use external 12V" V 3050 3850 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 2950 4600 50  0001 C CNN
 F 3 "~" H 2950 4600 50  0001 C CNN
 	1    2950 4600
@@ -1238,7 +1225,7 @@ L Connector_Generic:Conn_01x02 J13
 U 1 1 5E63D233
 P 7000 3400
 F 0 "J13" V 7000 3500 50  0000 L CNN
-F 1 "Jumper 2 External Power" V 7000 2250 50  0000 L CNN
+F 1 "Jumper 2 External FET Power" V 7000 2100 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 7000 3400 50  0001 C CNN
 F 3 "~" H 7000 3400 50  0001 C CNN
 	1    7000 3400
@@ -1269,7 +1256,7 @@ L Connector_Generic:Conn_01x03 J20
 U 1 1 5E5E9AFB
 P 8300 1750
 F 0 "J20" V 8400 1700 50  0000 L CNN
-F 1 "Jumper 1 External Power" V 8300 600 50  0000 L CNN
+F 1 "Jumper 1 External FET Power" V 8300 400 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 8300 1750 50  0001 C CNN
 F 3 "~" H 8300 1750 50  0001 C CNN
 	1    8300 1750
@@ -1330,8 +1317,6 @@ F 6 "" H 6900 2600 50  0001 L BNN "Field6"
 $EndComp
 Wire Wire Line
 	6750 1750 6750 1450
-Wire Wire Line
-	6000 2350 6200 2350
 Wire Wire Line
 	6200 2350 6200 1850
 Wire Wire Line
@@ -1413,4 +1398,53 @@ Text Notes 8705 4035 0    49   ~ 0
 Default 230V AC
 Text Notes 8715 5480 0    49   ~ 0
 Default 230V AC
+Wire Wire Line
+	4750 2700 4800 2700
+Wire Wire Line
+	4450 2700 4350 2700
+$Comp
+L Connector_Generic:Conn_01x02 J22
+U 1 1 5E6404FC
+P 6000 2700
+F 0 "J22" H 5950 2800 50  0000 L CNN
+F 1 "Jumper Rel./FET Override" H 5850 2500 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6000 2700 50  0001 C CNN
+F 3 "~" H 6000 2700 50  0001 C CNN
+	1    6000 2700
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0110
+U 1 1 5E6923E9
+P 6200 3050
+F 0 "#PWR0110" H 6200 2800 50  0001 C CNN
+F 1 "GND" H 6205 2877 50  0000 C CNN
+F 2 "" H 6200 3050 50  0001 C CNN
+F 3 "" H 6200 3050 50  0001 C CNN
+	1    6200 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 3050 6200 2800
+Wire Wire Line
+	6200 2700 6200 2350
+$Comp
+L Connector:Barrel_Jack_Switch J18
+U 1 1 5E612FDC
+P 2500 5500
+F 0 "J18" H 2500 5300 50  0000 C CNN
+F 1 "BarrelJack_DC5.5F" H 2350 5700 50  0000 C CNN
+F 2 "Footprints:BarrelJack_DC5.5F" H 2550 5460 50  0001 C CNN
+F 3 "~" H 2550 5460 50  0001 C CNN
+	1    2500 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 5500 2850 5500
+Wire Wire Line
+	2850 5500 2850 5600
+Connection ~ 2850 5600
+Connection ~ 6200 2350
+Wire Wire Line
+	6000 2350 6200 2350
 $EndSCHEMATC
