@@ -1,6 +1,6 @@
 **KiCaD (concept) design Deurnode nieuw**
 
-Current version: V0.5
+Current version: V0.6
 
 This repository contains the KiCad design for Deurnode nieuw, a deurnode for the Makerspace Leiden. This new design is based on the use of an Olimex ESP32-PoE.
 
@@ -26,8 +26,8 @@ Both opto couplers can detect 230V AC available or not. By changing the input re
   - Digital output to switch a coil or so. There are two options:
     - A relais controlled output (max. 250V AC/10A)
     - A FET based output based on Polu Breakout A4988.
-
-The FET can handle max DC 55V/35 A. In that case the FET most likely must be kept cool by means of a small cool block. By means of two jumpers FET can be used completely isolated from circuitboard or not. If not, the 12V available on the board is used for the FET.
+	The FET can handle max DC 55V/35 A. In that case the FET most likely must be kept cool by means of a small cool block. By means of two jumpers FET can be used completely isolated from circuitboard or not. If not, the 12V available on the board is used for the FET.
+	For testing purposes, both the relais and the FET can be switched on permanently by placing jumper "Rel./FET Override"
 
 - SPI based RFID reader connection
 - Step motor output
@@ -36,7 +36,7 @@ The FET can handle max DC 55V/35 A. In that case the FET most likely must be kep
 
 Depending on how the deurnode is used, there are two options to provide power to the deurnode print:
 
-1. The ethernet port of the Olimex ESP32-PoE board is directly connected to the MSL LAN. J19 must be removed in this situation. In that case there is no 12V available. It is however possible to provide 12V with an external PSU. Without external 12 V the step motor and the buzzer will not function at all and also the 12V output for the FET will not be available.
+1. The ethernet port of the Olimex ESP32-PoE board is directly connected to the MSL LAN. Jumper J19 (Use external 12V) must be removed in this situation. In that case there is no 12V available. It is however possible to provide 12V with an external PSU. Without external 12 V the step motor and the buzzer will not function at all and also the 12V output for the FET will not be available.
 2. To power the board via an external PSU (only). J19 must be installed and the ethernet board of the Olimex board should not be connected to a PoE cable.
 
 The following solution is available to couple the deurnode directly to a PoE connection of MSL LAN and also provide 12V to the deurnode board. See the diagram in the file &quot;Deurnode Nieuw power supply V0.1 20200302.pdf&quot;
