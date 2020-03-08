@@ -1,29 +1,22 @@
 **KiCaD (concept) design Deurnode nieuw**
 
-Current version: V0.7
+Current version: concept V0.8
 
 This repository contains the KiCad design for Deurnode nieuw, a deurnode for the Makerspace Leiden. This new design is based on the use of an Olimex ESP32-PoE.
 
 **This Deurnode Nieuw has the following features:**
 
 - Two digital inputs van be used. The following options are available:
+	Option 1:
+ 	- 1x Simple digital switch input (to be used for the Grote Schakelaar e.g.).
+ 	- 1x Opto coupler input.
+	Remark:
+	If input Schakelaar is not used, C1 could be removed
 
-Option 1:
-
--
-  - 1x Simple digital switch input (to be used for the Grote Schakelaar e.g.).
-  - 1x Opto coupler input.
-
-Option 2:
-
--
+	Option 2:
   - 2x opto coupler input.
-  
-WARNING
-1) Don't install C1, R3 and J6 if Opto Coupler 1 input is used.
-2) Don't install OK1, J14, R6 and R7 if Schakelaar input is used.
 
-Both opto couplers can detect 230V AC available or not. By changing the input resistors of the optocouplers the inputs can be used for other voltages as well.
+	Both opto couplers can detect 230V AC available or not. By changing the input resistors of the optocouplers the inputs can be used for other voltages as well.
 
 - 1 digital output is available. The following options are available:
   - Digital output, to directly control a buzzer.
@@ -33,12 +26,8 @@ Both opto couplers can detect 230V AC available or not. By changing the input re
 	The FET can handle max DC 55V/30 A. In our case max Ids is much less, due to to low maximum gateway voltage of about 3V. In case it is needed, the FET can be kept cool by means of a small cool block.
 	For testing purposes, both the relais and the FET can be switched on permanently by placing jumper "Rel./FET Override".
 
-WARNING
-1) Don't install D1, K1 and J12 if FET output is used.
-2) Don't install D2, D3, J9 and R10 if Relais output is used.
-3) Don't install D1, D2, D3, J9, J12, K1 and R10 if Buzzer is used.
-
 - SPI based RFID reader connection..
+
 - Step motor output, based on Polu Breakout A4988.
 
 **Power supply:**

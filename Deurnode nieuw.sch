@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Deurnode (based on Olimex ESP32-POE)"
-Date "2020-03-07"
-Rev "Version 0.7"
+Date "2020-03-08"
+Rev "Version 0.8"
 Comp "Makerspace Leiden"
 Comment1 "Hans Beerman"
 Comment2 ""
@@ -369,7 +369,7 @@ F 3 "~" H 7100 2800 50  0001 C CNN
 	1    7100 2800
 	0    1    1    0   
 $EndComp
-Text GLabel 6850 2800 0    50   Input ~ 0
+Text GLabel 6000 2800 0    50   Input ~ 0
 GPIO16_I2C-SCL
 Wire Wire Line
 	2300 3150 3100 3150
@@ -560,8 +560,6 @@ Wire Wire Line
 	8400 750  8400 1050
 Wire Wire Line
 	6750 1000 6750 850 
-Wire Wire Line
-	6750 850  7400 850 
 $Comp
 L power:+5V #PWR04
 U 1 1 5E59AF4F
@@ -593,30 +591,19 @@ $EndComp
 $Comp
 L Connector:Screw_Terminal_01x02 J14
 U 1 1 5E5F8709
-P 8600 3950
-F 0 "J14" H 8550 4100 50  0000 L CNN
-F 1 "Screw_Terminal_01x02" H 8750 4100 50  0000 L CNN
-F 2 "TerminalBlock_RND:TerminalBlock_RND_205-00287_1x02_P5.08mm_Horizontal" H 8600 3950 50  0001 C CNN
-F 3 "~" H 8600 3950 50  0001 C CNN
-	1    8600 3950
-	1    0    0    -1  
+P 8600 4050
+F 0 "J14" H 8550 4200 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 8750 4200 50  0000 L CNN
+F 2 "TerminalBlock_RND:TerminalBlock_RND_205-00287_1x02_P5.08mm_Horizontal" H 8600 4050 50  0001 C CNN
+F 3 "~" H 8600 4050 50  0001 C CNN
+	1    8600 4050
+	1    0    0    1   
 $EndComp
 $Comp
 L Device:R R6
 U 1 1 5E5F9735
-P 8050 3900
-F 0 "R6" V 7950 3900 50  0000 C CNN
-F 1 "220k" V 8050 3900 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7980 3900 50  0001 C CNN
-F 3 "~" H 8050 3900 50  0001 C CNN
-	1    8050 3900
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R7
-U 1 1 5E5F9EE9
 P 8050 4100
-F 0 "R7" V 8150 4100 50  0000 C CNN
+F 0 "R6" V 8150 4100 50  0000 C CNN
 F 1 "220k" V 8050 4100 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7980 4100 50  0001 C CNN
 F 3 "~" H 8050 4100 50  0001 C CNN
@@ -665,34 +652,34 @@ $EndComp
 $Comp
 L Connector:Screw_Terminal_01x02 J15
 U 1 1 5E676B21
-P 8600 5400
-F 0 "J15" H 8550 5550 50  0000 L CNN
-F 1 "Screw_Terminal_01x02" H 8750 5550 50  0000 L CNN
-F 2 "TerminalBlock_RND:TerminalBlock_RND_205-00287_1x02_P5.08mm_Horizontal" H 8600 5400 50  0001 C CNN
-F 3 "~" H 8600 5400 50  0001 C CNN
-	1    8600 5400
-	1    0    0    -1  
+P 8600 5500
+F 0 "J15" H 8550 5650 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 8750 5650 50  0000 L CNN
+F 2 "TerminalBlock_RND:TerminalBlock_RND_205-00287_1x02_P5.08mm_Horizontal" H 8600 5500 50  0001 C CNN
+F 3 "~" H 8600 5500 50  0001 C CNN
+	1    8600 5500
+	1    0    0    1   
 $EndComp
 $Comp
 L Device:R R8
 U 1 1 5E676B27
-P 8050 5350
-F 0 "R8" V 7950 5350 50  0000 C CNN
-F 1 "220k" V 8050 5350 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7980 5350 50  0001 C CNN
-F 3 "~" H 8050 5350 50  0001 C CNN
-	1    8050 5350
+P 8050 5550
+F 0 "R8" V 8150 5550 50  0000 C CNN
+F 1 "220k" V 8050 5550 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7980 5550 50  0001 C CNN
+F 3 "~" H 8050 5550 50  0001 C CNN
+	1    8050 5550
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:R R9
 U 1 1 5E676B2D
-P 8050 5550
-F 0 "R9" V 8150 5550 50  0000 C CNN
-F 1 "220k" V 8050 5550 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7980 5550 50  0001 C CNN
-F 3 "~" H 8050 5550 50  0001 C CNN
-	1    8050 5550
+P 8050 5350
+F 0 "R9" V 8150 5350 50  0000 C CNN
+F 1 "220k" V 8050 5350 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7980 5350 50  0001 C CNN
+F 3 "~" H 8050 5350 50  0001 C CNN
+	1    8050 5350
 	0    1    1    0   
 $EndComp
 Wire Wire Line
@@ -1001,21 +988,19 @@ Text Notes 8705 4035 0    49   ~ 0
 Default 230V AC
 Text Notes 8715 5480 0    49   ~ 0
 Default 230V AC
-Wire Wire Line
-	6950 2800 6850 2800
 $Comp
 L power:GND #PWR0110
 U 1 1 5E6923E9
-P 6500 2400
-F 0 "#PWR0110" H 6500 2150 50  0001 C CNN
-F 1 "GND" H 6505 2227 50  0000 C CNN
-F 2 "" H 6500 2400 50  0001 C CNN
-F 3 "" H 6500 2400 50  0001 C CNN
-	1    6500 2400
+P 6500 2150
+F 0 "#PWR0110" H 6500 1900 50  0001 C CNN
+F 1 "GND" H 6505 1977 50  0000 C CNN
+F 2 "" H 6500 2150 50  0001 C CNN
+F 3 "" H 6500 2150 50  0001 C CNN
+	1    6500 2150
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6500 2400 6500 2150
+	6500 2150 6500 1900
 $Comp
 L Connector:Barrel_Jack_Switch J18
 U 1 1 5E612FDC
@@ -1128,18 +1113,14 @@ $EndComp
 $Comp
 L Connector_Generic:Conn_01x02 J22
 U 1 1 5E6404FC
-P 6300 2050
-F 0 "J22" H 6250 2150 50  0000 L CNN
-F 1 "Force output Rel./FET on" H 6150 1850 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6300 2050 50  0001 C CNN
-F 3 "~" H 6300 2050 50  0001 C CNN
-	1    6300 2050
+P 6300 1800
+F 0 "J22" H 6250 1900 50  0000 L CNN
+F 1 "Force output Relais on" H 6150 1600 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6300 1800 50  0001 C CNN
+F 3 "~" H 6300 1800 50  0001 C CNN
+	1    6300 1800
 	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	7400 1450 7400 2350
-Wire Wire Line
-	7400 2350 7750 2350
 $Comp
 L power:+12V #PWR016
 U 1 1 5E644A6D
@@ -1158,8 +1139,6 @@ Wire Wire Line
 Connection ~ 8400 2200
 Wire Wire Line
 	8400 2200 8400 2250
-Text Notes 4000 3300 0    59   ~ 12
-WARNING\n1) Don't install D1, K1 and J12 if FET output is used\n2) Don't install D2, D3, J9 and R10 if Relais output is used\n3) Don't install D1, D2, D3, J9, J12, K1 and R10 if Buzzer is used
 Wire Wire Line
 	7250 2800 7400 2800
 Connection ~ 7400 2800
@@ -1185,12 +1164,12 @@ $EndComp
 $Comp
 L Diode:1N4004 D1
 U 1 1 5E593BB3
-P 6750 1150
-F 0 "D1" V 6704 1229 50  0000 L CNN
-F 1 "1N4004" V 6795 1229 50  0000 L CNN
-F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 6750 975 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 6750 1150 50  0001 C CNN
-	1    6750 1150
+P 7000 1150
+F 0 "D1" H 7100 1250 50  0000 L CNN
+F 1 "1N4004" H 6750 1250 50  0000 L CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 7000 975 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 7000 1150 50  0001 C CNN
+	1    7000 1150
 	0    1    1    0   
 $EndComp
 Wire Wire Line
@@ -1199,12 +1178,10 @@ Wire Wire Line
 	6750 1300 6750 1450
 Connection ~ 6750 1450
 Wire Wire Line
-	6750 1450 7400 1450
-Wire Wire Line
-	6500 2050 6500 1450
+	6500 1800 6500 1450
 Connection ~ 6500 1450
-Text Notes 7050 4800 0    59   ~ 12
-WARNING\n1) Don't install C1, R3 and J6 if Opto Coupler 1 input is used\n2) Don't install OK1, J14, R6 and R7 if Schakelaar input is used
+Text Notes 4100 3550 0    59   ~ 12
+Remark:\nIf input Schakelaar is not used, C1 could be removed
 Wire Wire Line
 	7800 1450 8200 1450
 Wire Wire Line
@@ -1228,29 +1205,128 @@ F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 7600 1150 50  0001
 	1    7600 1150
 	1    0    0    -1  
 $EndComp
-Connection ~ 7400 1450
+$Comp
+L Transistor_BJT:BC547 Q2
+U 1 1 5E6740A8
+P 7050 1850
+F 0 "Q2" H 7241 1896 50  0000 L CNN
+F 1 "BC547" H 7241 1805 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 7250 1775 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 7050 1850 50  0001 L CNN
+	1    7050 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR011
+U 1 1 5E67C879
+P 7150 2150
+F 0 "#PWR011" H 7150 1900 50  0001 C CNN
+F 1 "GND" H 7155 1977 50  0000 C CNN
+F 2 "" H 7150 2150 50  0001 C CNN
+F 3 "" H 7150 2150 50  0001 C CNN
+	1    7150 2150
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	7700 4100 7800 4100
+	7150 2150 7150 2050
 Wire Wire Line
-	7800 4100 7800 3900
+	6950 2800 6800 2800
+$Comp
+L Device:R R11
+U 1 1 5E68BC49
+P 6800 2200
+F 0 "R11" H 6870 2246 50  0000 L CNN
+F 1 "1k" V 6800 2150 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 6730 2200 50  0001 C CNN
+F 3 "~" H 6800 2200 50  0001 C CNN
+	1    6800 2200
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	7800 3900 7900 3900
+	6800 2350 6800 2800
+Connection ~ 6800 2800
 Wire Wire Line
-	7900 4100 7900 4000
+	6800 2800 6000 2800
 Wire Wire Line
-	7900 4000 7700 4000
+	6800 2050 6800 1850
 Wire Wire Line
-	7700 4000 7700 3900
+	6800 1850 6850 1850
+$Comp
+L Connector_Generic:Conn_01x02 J10
+U 1 1 5E6B22A0
+P 7950 1800
+F 0 "J10" H 7900 1900 50  0000 L CNN
+F 1 "Force output FET on" H 8000 1900 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 7950 1800 50  0001 C CNN
+F 3 "~" H 7950 1800 50  0001 C CNN
+	1    7950 1800
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	7700 5350 7700 5450
+	7150 1650 7150 1450
+Connection ~ 7150 1450
 Wire Wire Line
-	7700 5450 7900 5450
+	7150 1450 7400 1450
 Wire Wire Line
-	7900 5450 7900 5550
+	7750 1900 7750 2200
+Connection ~ 7750 2200
+$Comp
+L power:GND #PWR018
+U 1 1 5E6DA6A3
+P 7550 2150
+F 0 "#PWR018" H 7550 1900 50  0001 C CNN
+F 1 "GND" H 7555 1977 50  0000 C CNN
+F 2 "" H 7550 2150 50  0001 C CNN
+F 3 "" H 7550 2150 50  0001 C CNN
+	1    7550 2150
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	7700 5550 7800 5550
+	7550 2150 7550 1800
 Wire Wire Line
-	7800 5550 7800 5350
+	7550 1800 7750 1800
 Wire Wire Line
-	7800 5350 7900 5350
+	6750 850  7000 850 
+Wire Wire Line
+	6750 1450 7000 1450
+Wire Wire Line
+	7000 1300 7000 1450
+Connection ~ 7000 1450
+Wire Wire Line
+	7000 1450 7150 1450
+Wire Wire Line
+	7000 1000 7000 850 
+Connection ~ 7000 850 
+Wire Wire Line
+	7000 850  7400 850 
+$Comp
+L Device:R R2
+U 1 1 5E705D16
+P 6750 1150
+F 0 "R2" H 6820 1196 50  0000 L CNN
+F 1 "4k7" V 6750 1100 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 6680 1150 50  0001 C CNN
+F 3 "~" H 6750 1150 50  0001 C CNN
+	1    6750 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 5E5F9EE9
+P 8050 3900
+F 0 "R7" V 8150 3900 50  0000 C CNN
+F 1 "220k" V 8050 3900 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7980 3900 50  0001 C CNN
+F 3 "~" H 8050 3900 50  0001 C CNN
+	1    8050 3900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7700 5550 7900 5550
+Wire Wire Line
+	7700 5350 7900 5350
+Wire Wire Line
+	7700 3900 7900 3900
+Wire Wire Line
+	7900 4100 7700 4100
 $EndSCHEMATC
